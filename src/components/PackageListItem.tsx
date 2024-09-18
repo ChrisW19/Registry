@@ -19,14 +19,14 @@ export default function PackageListItem({packg}: PackageListItemProps) {
 
     return (
         <div className="border p-4 rounded flex justify-between items-center bg-slate-100">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col w-3/4 gap-2">
                 <Link to={`/packages/${packg.name}`} className="text-xl font-bold">
                     {packg.name}
                 </Link>
                 <p className="text-sm text-gray-500">
                     {packg.description}
                 </p>
-                <div className="flex gap-1">
+                <div className="flex gap-1 flex-wrap">
                     {renderedKeywords}
                 </div>
             </div>
