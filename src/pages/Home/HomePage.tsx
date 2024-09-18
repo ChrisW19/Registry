@@ -21,8 +21,18 @@ export default function HomePage() {
             <Link to={`/packages/${pckg.name}`} className="border rounded border-gray-900 text-center">
                 View - {pckg.name}
             </Link>
+            <a
+                href={`https://npmjs.com/package/${pckg.name}`}
+                className="border rounded border-gray-900 text-center"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Go to NPM page for ${pckg.name}`}
+            >
+                NPM Page
+            </a>
         </div>
     })
+
     return (
         <div className="container py-12 space-y-8">
             <div className="space-y-6 text-center">
